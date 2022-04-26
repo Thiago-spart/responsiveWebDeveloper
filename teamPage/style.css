@@ -1,0 +1,195 @@
+:root {
+	--text-color: #000000;
+	--footer-text-color: #a9a9a9;
+	--background-color: #fafafa;
+}
+
+body {
+	background-color: var(--background-color);
+	color: var(--text-color);
+	font-family: "Poppins", sans-serif;
+	overflow-x: hidden;
+}
+
+main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 7.1rem 1.2rem;
+	gap: 3.5rem;
+}
+
+.about {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-direction: column;
+	gap: 3.8rem;
+}
+
+.about h1 {
+	font-weight: 700;
+	font-size: 3.6rem;
+	line-height: 4.77rem;
+	white-space: nowrap;
+	font-family: "PT Serif", serif;
+	width: 100%;
+}
+
+.about div {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-direction: column;
+	gap: 1rem;
+	width: 100%;
+}
+
+.about div h4 {
+	font-weight: 600;
+	font-size: 1.8rem;
+	line-height: 2.7rem;
+	text-transform: uppercase;
+}
+
+.about div p {
+	font-weight: 400;
+	font-size: 1.4rem;
+	width: 100%;
+	line-height: 2.1rem;
+}
+
+.team-gallery {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: start;
+	gap: clamp(1.8rem, 1vw, 2.2rem);
+}
+
+.profile-card:nth-child(even) {
+	margin-top: 5.2rem;
+}
+
+.profile-card {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	flex-direction: column;
+	gap: 1rem;
+	max-width: 13.872rem;
+	height: 21.944rem;
+}
+
+.profile-card span {
+	font-family: "PT Serif", sans-serif;
+	font-weight: 400;
+	font-size: 1rem;
+	line-height: 1.3rem;
+	text-transform: uppercase;
+
+	transform: rotate(90deg);
+	position: absolute;
+	top: 16%;
+	right: -36%;
+	width: 70px;
+	white-space: nowrap;
+}
+
+.profile-card h2 {
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	font-size: 1.4rem;
+	line-height: 2.1rem;
+}
+
+.profile-card img {
+	max-width: 100%;
+
+	object-fit: contain;
+}
+
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+	font-size: 1.4rem;
+	line-height: 1.7rem;
+	text-align: center;
+	color: var(--footer-text-color);
+	width: 100%;
+}
+
+footer a {
+	color: var(--footer-text-color);
+	margin: 0 0.5rem;
+	text-decoration: underline;
+	transition: 0.4s;
+}
+
+footer a:hover {
+	filter: brightness(0.8);
+}
+
+@media screen and (min-width: 420px) {
+	.profile-card span {
+		top: 12%;
+		right: -31%;
+	}
+}
+
+@media screen and (min-width: 640px) {
+	main {
+		gap: 9.6rem;
+	}
+
+	.about {
+		flex-direction: row;
+		align-items: baseline;
+		justify-content: space-between;
+	}
+
+	.about h1,
+	.about div {
+		width: 50%;
+	}
+
+	.about div p {
+		font-size: 1.8rem;
+		line-height: 2.7rem;
+	}
+
+	.profile-card {
+		max-width: 23.8rem;
+		height: auto;
+	}
+
+	.profile-card span {
+		top: 7%;
+		right: -18%;
+		font-size: 1.2rem;
+		line-height: 1.6rem;
+	}
+
+	.profile-card h2 {
+		font-size: 1.8rem;
+		line-height: 2.7rem;
+	}
+
+	.team-gallery {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 3rem;
+	}
+
+	.profile-card:nth-child(even) {
+		margin-top: 0;
+	}
+
+	.profile-card:nth-child(2),
+	.profile-card:nth-child(3n + 5) {
+		margin-top: 8rem;
+	}
+}
