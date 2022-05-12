@@ -1,0 +1,293 @@
+:root {
+	--background-color: #181719;
+	--text-color: #ffffff;
+	--header-icon: #f2f2f2;
+	--footer-color: #a9a9a9;
+	--user-name-color: #828282;
+}
+
+body {
+	background-color: var(--background-color);
+	color: var(--text-color);
+	font-family: "Montserrat", sans-serif;
+}
+
+header {
+	padding: 1.9rem 1.2rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+main {
+	padding: 1.9rem 1.2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+	gap: 2.5rem;
+}
+
+footer {
+	margin-top: 10rem;
+	padding: 2.4rem 4.4rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+	font-size: 1.4rem;
+	line-height: 1.7rem;
+	color: var(--footer-color);
+	text-align: center;
+	white-space: nowrap;
+}
+
+footer a {
+	margin-right: 0.5rem;
+	margin-left: 0.5rem;
+	color: var(--text-color);
+}
+
+.logo {
+	font-family: "Crimson Pro", sans-serif;
+	font-weight: 200;
+	font-size: 1.4rem;
+	line-height: 1.6rem;
+	display: inline-block;
+	text-transform: uppercase;
+	cursor: pointer;
+
+	padding: 0.8rem;
+	border: 1px solid var(--text-color);
+	transition: 0.4s;
+}
+
+.logo:hover {
+	filter: brightness(0.8);
+}
+
+.nav-list {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 1.6rem;
+}
+
+.nav-list li {
+	padding: 0.8rem;
+	border-bottom: 2px solid transparent;
+
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+	font-size: 1.8rem;
+	line-height: 2.2rem;
+	transition: 0.4s;
+}
+
+.nav-list li:hover:not(.active-link) {
+	cursor: pointer;
+	filter: brightness(0.8);
+}
+
+.active-link {
+	border-color: var(--text-color) !important;
+	font-weight: 700 !important;
+	cursor: default;
+}
+
+.author-div {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	background-color: var(--background-color);
+	bottom: 0;
+	padding: 1.31rem 1.9rem 2.5rem 1.9rem;
+	max-width: 30rem;
+	width: 80%;
+	gap: 1.8rem;
+}
+
+.author-div > div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1.4rem;
+}
+
+.author-div div img {
+	width: 3.659rem;
+	object-fit: contain;
+	border-radius: 50%;
+}
+
+.author-div h4 {
+	font-family: "Lora", sans-serif;
+	font-weight: 700;
+	font-size: 1.8rem;
+	line-height: 2.3rem;
+}
+
+.profile-information {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-direction: column;
+	gap: 0.585rem;
+}
+
+.profile-information h4 {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+	font-size: 1.2rem;
+	line-height: 1.5rem;
+}
+
+.profile-information span {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+	font-size: 1rem;
+	line-height: 1.2rem;
+	color: var(--user-name-color);
+}
+
+#menu-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 0.8rem;
+	cursor: pointer;
+	z-index: 5;
+}
+
+#nav-container {
+	display: none;
+	align-items: center;
+	justify-content: center;
+	z-index: 1;
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: var(--background-color);
+}
+
+#desktop-nav {
+	display: none;
+}
+
+#presentation-section {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-direction: column;
+	gap: 2.5rem;
+}
+
+#presentation-section h1 {
+	font-family: "Lora", sans-serif;
+	font-weight: 500;
+	font-size: 3.6rem;
+	line-height: 4.6rem;
+}
+
+#presentation-section p,
+#presentation-section a {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 400;
+	font-size: 1.4rem;
+	line-height: 1.7rem;
+}
+
+#presentation-section a {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-weight: 700;
+	color: var(--text-color);
+}
+
+#article-section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	width: 100%;
+	padding-bottom: 8.278rem;
+}
+
+@media screen and (min-width: 1023px) {
+	header {
+		padding: 4.2rem 7.7rem;
+	}
+
+	main {
+		flex-direction: row;
+		padding: 4.2rem 7.7rem;
+		gap: 1rem;
+	}
+
+	footer {
+		margin-top: 0;
+	}
+
+	.nav-list {
+		flex-direction: row;
+	}
+
+	.author-div {
+		max-width: 41rem;
+		right: 10%;
+	}
+
+	.author-div h4 {
+		font-size: 2.4rem;
+		line-height: 3.1rem;
+	}
+
+	.profile-information h4 {
+		font-size: 1.4rem;
+		line-height: 1.7rem;
+	}
+
+	.profile-information span {
+		font-size: 1.2rem;
+		line-height: 1.5rem;
+	}
+
+	#desktop-nav {
+		display: flex;
+	}
+
+	#nav-container,
+	#menu-btn {
+		display: none;
+	}
+
+	#presentation-section {
+		width: 40%;
+	}
+
+	#presentation-section h1 {
+		font-size: 4.8rem;
+		line-height: 6.1rem;
+	}
+
+	#presentation-section p,
+	#presentation-section a {
+		font-size: 2.4rem;
+		line-height: 2.9rem;
+	}
+
+	#article-section {
+		width: 60%;
+	}
+}
