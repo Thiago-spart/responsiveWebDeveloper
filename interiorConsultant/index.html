@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1,
+  maximum-scale=5"
+		/>
+
+		<link rel="icon" href="./public/devchallenges.png" />
+
+		<link
+			rel="shortcut icon"
+			type="image/x-icon"
+			href="https://devchallenges.io/"
+		/>
+
+		<link rel="stylesheet" href="./globalStyles.mini.css" />
+		<link rel="stylesheet" href="./styles.css" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@500;700&family=Montserrat:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+
+		<title>Interior Consultant</title>
+	</head>
+	<body>
+		<header>
+			<span class="logo">This Interior</span>
+
+			<div onclick="toggleMobileMenu()" id="menu-btn">
+				<span class="material-symbols-outlined material-icons">menu</span>
+			</div>
+
+			<nav id="desktop-nav">
+				<ul class="nav-list">
+					<li class="active-link">Home</li>
+					<li>Collection</li>
+					<li>About</li>
+					<li>Contact</li>
+				</ul>
+			</nav>
+		</header>
+		<nav id="nav-container">
+			<ul class="nav-list">
+				<li class="active-link">Home</li>
+				<li>Collection</li>
+				<li>About</li>
+				<li>Contact</li>
+			</ul>
+		</nav>
+
+		<main>
+			<section id="presentation-section">
+				<h1>Modern interior</h1>
+				<p>
+					A full-Service residential & commercial interior design and staging
+					company offering professional organizing & eco-services.
+				</p>
+				<a href="#">
+					Read more
+					<span class="material-symbols-outlined material-icons">
+						trending_flat
+					</span>
+				</a>
+			</section>
+			<section id="article-section">
+				<img src="./public/photo1.png" alt="gallery example " />
+
+				<div class="author-div">
+					<div>
+						<img
+							src="./public/photo2.png"
+							alt="Aliza Webber's proffile photo"
+						/>
+
+						<div class="profile-information">
+							<h4>Aliza Webber</h4>
+							<span>Interior designer</span>
+						</div>
+					</div>
+					<h4>Designed in 2020 by Aliza Webber</h4>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			created by <a href="https://github.com/Thiago-spart">Thiago Spart</a> -
+			devChallenges.io
+		</footer>
+
+		<script>
+			const toggleMobileMenu = () => {
+				let navContainer = document.getElementById("nav-container");
+				const menuBtn = document
+					.getElementById("menu-btn")
+					.querySelector("span");
+
+				if (navContainer.style.display === "flex") {
+					navContainer.style.display = "none";
+				} else {
+					navContainer.style.display = "flex";
+				}
+
+				if (menuBtn.textContent === "menu") {
+					menuBtn.textContent = "close";
+				} else {
+					menuBtn.textContent = "menu";
+				}
+			};
+		</script>
+	</body>
+</html>
