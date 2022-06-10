@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1,
+  maximum-scale=5"
+		/>
+
+		<link rel="icon" href="./public/devchallenges.png" />
+
+		<link
+			rel="shortcut icon"
+			type="image/x-icon"
+			href="https://devchallenges.io/"
+		/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="./globalStyles.mini.css" />
+		<link rel="stylesheet" href="./styles.css" />
+
+		<title>Checkout | FlightCompany</title>
+	</head>
+	<body>
+		<header>
+			<h1>Checkout</h1>
+		</header>
+
+		<main>
+			<section id="market-cart">
+				<div class="product-container">
+					<img src="./public/photo1.png" alt="Vintage Backbag" />
+					<div class="product-description">
+						<h4>Vintage Backbag</h4>
+						<div class="product-price">
+							<p>$54.99</p>
+							<span>$94.99</span>
+						</div>
+						<div class="input-container">
+							<button type="button" aria-valuetext="minus-button">
+								<span class="material-symbols-outlined material-icons">
+									remove
+								</span>
+							</button>
+							<input type="number" value="1" />
+							<button type="button" aria-valuetext="minus-button">
+								<span class="material-symbols-outlined material-icons">
+									add
+								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="product-container">
+					<img src="./public/photo2.png" alt="Levi Shoes" />
+					<div class="product-description">
+						<h4>Levi Shoes</h4>
+						<div class="product-price">
+							<p>$74.99</p>
+							<span>$124.99</span>
+						</div>
+						<div class="input-container">
+							<button type="button" aria-valuetext="minus-button">
+								<span class="material-symbols-outlined material-icons">
+									remove
+								</span>
+							</button>
+							<input type="number" value="1" />
+							<button type="button" aria-valuetext="minus-button">
+								<span class="material-symbols-outlined material-icons">
+									add
+								</span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<ul id="products-price-list">
+					<li>
+						<p>Shipping</p>
+						<span>$19</span>
+					</li>
+					<li>
+						<p>Total</p>
+						<span>$148.98</span>
+					</li>
+				</ul>
+			</section>
+
+			<section id="checkout-form">
+				<form>
+					<h3>Contact information</h3>
+					<div class="form-group">
+						<label for="client-email">E-mail</label>
+						<input
+							type="email"
+							id="client-email"
+							placeholder="Enter your e-mail..."
+						/>
+						<span class="material-symbols-outlined material-icons"> mail </span>
+					</div>
+					<div class="form-group">
+						<label for="client-phone">Phone</label>
+						<input
+							type="tel"
+							id="client-phone"
+							placeholder="Enter your phone..."
+						/>
+						<span class="material-symbols-outlined material-icons"> call </span>
+					</div>
+
+					<h3>Shipping address</h3>
+
+					<div class="form-group">
+						<label for="client-name">Full name</label>
+						<input type="text" id="client-name" placeholder="Rodney Cotton" />
+						<span class="material-symbols-outlined material-icons">
+							account_circle
+						</span>
+					</div>
+
+					<div class="form-group">
+						<label for="client-address">Address</label>
+						<input
+							type="text"
+							id="client-address"
+							placeholder="Your address.."
+						/>
+						<span class="material-symbols-outlined material-icons"> home </span>
+					</div>
+
+					<div class="form-group">
+						<label for="client-city">City</label>
+						<input type="text" id="client-city" placeholder="Your city..." />
+						<span class="material-symbols-outlined material-icons">
+							apartment
+						</span>
+					</div>
+
+					<div class="double-form">
+						<div class="form-group">
+							<label for="client-city">City</label>
+							<select id="client-city">
+								<option value="">Select city:</option>
+								<option value="1">Brazil</option>
+								<option value="2">Mexico</option>
+								<option value="3">Italy</option>
+							</select>
+							<span class="material-symbols-outlined material-icons">
+								public
+							</span>
+						</div>
+
+						<div class="form-group">
+							<label for="client-postal-code">Postal code</label>
+							<input
+								type="text"
+								id="client-postal-code"
+								placeholder="Your postal code..."
+							/>
+							<span class="material-symbols-outlined material-icons">
+								folder_open
+							</span>
+						</div>
+					</div>
+
+					<div id="checkbox-container">
+						<input type="checkbox" id="client-save-information" />
+						<label for="client-postal-code"
+							>Save this information for next time</label
+						>
+						<span class="checkmark"></span>
+					</div>
+
+					<button type="submit">Continue</button>
+				</form>
+			</section>
+		</main>
+
+		<footer>
+			created by <a href="https://github.com/Thiago-spart">Thiago Spart</a> -
+			devChallenges.io
+		</footer>
+	</body>
+</html>
